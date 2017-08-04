@@ -1,77 +1,120 @@
----
-layout: page
-main_image_path: /assets/header4.jpg
----
+    <!DOCTYPE HTML>
+    <html>
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Photographer Courses | Oxford | Rebecca Phillipson Photography</title>
+	<meta name="description" content="Rebecca Phillipson is an Oxford based photographer offering photography courses, portrait and fine art photography." /> 
+	<meta name="keywords" content="artist, photographer, photography courses, Isle of Wight photo courses, photo restoration, vegetable photos, photography tuition, Oxford, photography tutor, flower photos, still life photos,family portraits, child portraits, Rebecca Phillipson" />  
+	<meta name="author" content="Eye Division" />
+	<meta name="Copyright" content="Copyright (c) Rebecca Phillipson" />
+	<meta http-equiv="Expires" content="-1" />
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+	<meta name="author" content="Eye Division" />
+<meta name="Copyright" content="Copyright (c) Rebecca Phillipson" />
+<meta http-equiv="Expires" content="-1" />
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" href="css/blueprint/screen.css" type="text/css" media="screen, projection" />
+<link rel="stylesheet" href="css/eyegallery.css" type="text/css" media="screen, projection" />
+<link rel="stylesheet" href="css/blueprint/print.css" type="text/css" media="print" /> 
+<!--[if lt IE 8]>
+  <link rel="stylesheet" href="/css/blueprint/ie.css" type="text/css" media="screen, projection" />
+  <link rel="stylesheet" href="/css/eyegallery-ie.css" type="text/css" media="screen, projection" />
+<![endif]-->
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+		<link rel="stylesheet" href="css/theme-mini-light.css" />
+<!--[if lt IE 8]>
+<link rel="stylesheet" href="/css/anythingslider-ie.css" type="text/css" media="screen" />
+<![endif]-->  
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
+<script src="code/jquery.anythingslider.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+$(document).ready(function() {
+    $('#slider1').anythingSlider({
+        theme: 'mini-light',
+        easing: 'swing',
+        delay: 4000,
+        autoPlay: true,
+        startPanel: 1
+    });
+});
+/* ]]> */
+</script>
+		  <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-16735011-8']);
+  _gaq.push(['_trackPageview']);
 
-<ul class="post-list">
-  {% for post in paginator.posts %}
-  <li>
-    <h2>
-      <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-    </h2>
-    <section class="post-excerpt" itemprop="description">
-      <p>{{ post.content | strip_html | truncatewords: 50 }}</p>
-    </section>
-    <section class="post-meta">
-      <div class="post-date">{{ post.date | date: "%B %-d, %Y" }}</div>
-      <div class="post-categories">
-      {% if post.categories.size > 0 %}in {% for cat in post.categories %}
-        {% if site.jekyll-archives %}
-        <a href="{{ site.baseurl }}/category/{{ cat }}">{{ cat | capitalize }}</a>{% if forloop.last == false %}, {% endif %}
-        {% else %}
-        <span>{{ cat | capitalize }}</span>{% if forloop.last == false %}, {% endif %}
-        {% endif %}
-      {% endfor %}{% endif %}
-      </div>
-    </section>
-  </li>
-  {% if forloop.last == false %}
-  <hr>
-  {% endif %}
-  {% endfor %}
-</ul>
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<link rel="stylesheet" href="css/artist2011.css" type="text/css" media="screen, projection" />
+</head>	
+	<body>
+	 <header>
+         <h1><a href="index.php.html" title="Return home" accesskey="1">Rebecca Phillipson</a></h1>	
+     </header>   
 
-<nav class="pagination" role="navigation">
-  <p>
-    {% if paginator.next_page %}
-    <a class="newer-posts" href="{{ site.baseurl }}/page{{paginator.next_page}}">
-      <span class="fa-stack fa-lg">
-        <i class="fa fa-square fa-stack-2x"></i>
-        <i class="fa fa-angle-double-left fa-stack-1x fa-inverse"></i>
-      </span>
-    </a>
-    {% else %}
-    <span class="fa-stack fa-lg">
-      <i class="fa fa-square fa-stack-2x"></i>
-      <i class="fa fa-angle-double-left fa-stack-1x fa-inverse"></i>
-    </span>
-    {% endif %}
-    <span class="page-number">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
-    {% if paginator.previous_page %}
-      {% if paginator.page == 2 %}
-      <a class="newer-posts" href="{% if site.baseurl %}{{ site.baseurl }}{% endif %}/">
-        <span class="fa-stack fa-lg">
-          <i class="fa fa-square fa-stack-2x"></i>
-          <i class="fa fa-angle-double-right fa-stack-1x fa-inverse"></i>
-        </span>
-      </a>
-      {% else %}
-      <a class="newer-posts" href="{{ site.baseurl }}/page{{paginator.previous_page}}">
-        <span class="fa-stack fa-lg">
-          <i class="fa fa-square fa-stack-2x"></i>
-          <i class="fa fa-angle-double-right fa-stack-1x fa-inverse"></i>
-        </span>
-      </a>
-      {% endif %}
-    {% else %}
-    <span class="fa-stack fa-lg">
-      <i class="fa fa-square fa-stack-2x"></i>
-      <i class="fa fa-angle-double-right fa-stack-1x fa-inverse"></i>
-    </span>
-    {% endif %}
-  </p>
-  <p>
-    <a href="{{ site.baseurl }}/posts">View All Posts by Category</a>
-  </p>
-</nav>
+		
+<nav>
+    <ul>
+     <li><a href="index.html" title="Return to the home page" accesskey="1">home</a></li> 
+   <li><a href="9/about/index.html" title="View 1 thumbnail images for about">about</a></li><li><a href="7/courses/index.html" title="View 9 thumbnail images for courses">courses</a></li><li><a href="5/portraits/index.html" title="View 27 thumbnail images for portraits">portraits</a></li><li><a href="12/fine-art-photography/index.html" title="View 49 thumbnail images for fine art photography">fine art photography</a></li><li><a href="8/restoration/index.html" title="View 4 thumbnail images for restoration">restoration</a></li>    <li><a href="contact.php.html" title="Fill out our web form">contact</a></li>
+    </ul>
+        </nav>
+   	<div class="container">
+    <div class="page span-15 prepend-top">
+    <div class="pageborder span-13 prepend-1 append-1">
+                <p>Rebecca Phillipson works as a photographer, teacher and photographic artist. Her work can be broadly divided into three categories : portraiture, teaching and fine art photography, all of which are shown on this website. In addition Rebecca is skilled at restoring and copying old photographs, which she does as part of her oxford based business.</p> 
+                <p>Please use the contact page for any enquiries about portraits, restoration, tuition or purchasing fine art prints. Rebecca will be delighted to hear from you.</p>	
+            	<ul id="slider1">
+				                        <li><a href="index.html#"><img src="pictures/489812c493bf7.jpg" alt="image" width="631" height="320"></a></li>	
+                                                <li><a href="index.html#"><img src="pictures/4898130556dae.jpg" alt="image" width="640" height="320"></a></li>	
+                                                <li><a href="index.html#"><img src="pictures/4898134345e6d.jpg" alt="image" width="614" height="320"></a></li>	
+                                                <li><a href="index.html#"><img src="pictures/4898136c9691c.jpg" alt="image" width="614" height="320"></a></li>	
+                                                <li><a href="index.html#"><img src="pictures/489813968a733.jpg" alt="image" width="627" height="320"></a></li>	
+                                                <li><a href="index.html#"><img src="pictures/489813e4304ac.jpg" alt="image" width="601" height="320"></a></li>	
+                                                <li><a href="index.html#"><img src="pictures/489814078ab40.jpg" alt="image" width="594" height="320"></a></li>	
+                                                <li><a href="index.html#"><img src="pictures/4898145104944.jpg" alt="image" width="646" height="320"></a></li>	
+                                                <li><a href="index.html#"><img src="pictures/48a490d43cd79.jpg" alt="image" width="627" height="320"></a></li>	
+                                                <li><a href="index.html#"><img src="pictures/48a491107f58b.jpg" alt="image" width="634" height="320"></a></li>	
+                                                <li><a href="index.html#"><img src="pictures/48a49149322e4.jpg" alt="image" width="627" height="320"></a></li>	
+                                    </ul>
+            <p><img src="images/cherries_row.png" width="177" height="86" alt="Row of cherries" class="right"></p>
+        </div> <!-- /pageborder -->
+	</div><!-- /page -->
+    
+	<div class="span-9 last prepend-top"><!-- second column --> 
+        <div class="advert cherries1">
+            <h3><a href="thumbs.php%3Fcat=7.html">Courses</a></h3>
+            <img border="0" alt="" src="img.php%3Ff(4e13224658c20.jpg)&amp;w(200)&amp;q(100)" class="left">
+            10 week or 20 week photography courses in Oxford and residential courses on the Isle of Wight.<br /><br /><a href="7/courses/index.html">Learn More >></a>
+        </div>
+        <div class="advert cherries2">
+            <h3><a href="thumbs.php%3Fcat=5.html">Portraits</a></h3>
+            <img src="img.php%3Ff(49bbfe3cce0af.jpg)&amp;w(200)&amp;q(100)" width="200" height="134" alt="Untitled" class="left">
+            Specialising in child, baby and family portraits.<br /><br /><a href="5/portraits/index.html">Learn more >></a>
+        </div>
+        <div class="advert cherries1">
+            <h3><a href="thumbs.php%3Fcat=8.html">Restoration</a></h3>
+            <img width="200" height="132" alt="Before" src="img.php%3Ff(4896c20a2ffd2.jpg)&amp;w(200)&amp;q(100)" class="left">
+        Restore or copy your precious old photos.<br /><br /><a href="8/restoration/index.html">Learn more >></a>
+        </div>
+    </div>
 
+	<footer>
+    <div class="social"><p><a href="http://www.facebook.com/rphillipsonphotography"><img src="images/facebook.png" width="108" height="57" alt="Find us on Facebook"></a></p></div>
+    &copy; All work is copyright the artist, no reproduction without permission. Rebecca Phillipson - Oxford based Photographer<br />
+	An <a href="http://www.eyedivision.com" title="Site by Eye Division" target="_blank">Eye Division</a> site</footer>
+		
+		
+</div><!-- end container -->
+</body>
+</html>	
+	
